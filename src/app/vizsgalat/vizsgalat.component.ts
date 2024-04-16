@@ -125,11 +125,13 @@ export class VizsgalatComponent {
         title: "Nincs kiválasztva!"
       })
     } else {
+
       let v= new vizsgal()
       v.left=this.b
       v.right=this.r
       console.log("bal", v)
       this.data.createNew(v)
+
       Swal.fire({
         title: "Bal: " + this.r + " Hz",
         imageUrl: this.redkep.src,
@@ -162,7 +164,7 @@ export class VizsgalatComponent {
           )
         }
       )
-/*
+      /*
       let body:any = {}
       body.left = this.redValue
       body.right = this.blueValue

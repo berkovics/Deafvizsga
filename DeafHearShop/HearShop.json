@@ -85,16 +85,16 @@
       "price": "1520"
     },
     {
-      "id": "c83c",
-      "imageUrl": "https://marketplace.canva.com/EAE54xVnIvo/1/0/1600w/canva-beige-green-simple-product-feature-instagram-posts-4DHnplrmIp0.jpg",
-      "name": "22",
-      "price": 28000
+      "id": 15,
+      "imageUrl": "https://audiovary.hu/asset/media/term-tisztito-elektromos-szarito-2016-05-18-162702.jpg",
+      "name": "Elektromos szárítódoboz",
+      "price": "21700"
     },
     {
-      "id": "e63b",
-      "imageUrl": "https://marketplace.canva.com/EAE54xVnIvo/1/0/1600w/canva-beige-green-simple-product-feature-instagram-posts-4DHnplrmIp0.jpg",
-      "name": "500 elem",
-      "price": 250
+      "id": 16,
+      "imageUrl": "https://audiovary.hu/asset/media/term-tisztito-nedves-torlokendo-2016-05-18-162109.jpg",
+      "name": "Törlőkendő",
+      "price": "3397"
     }
   ]
 }
