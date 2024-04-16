@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('../../assets/image/hearing.jpg');
+    width: 100%;
+    overflow: hidden;
+}
+
+.container{
+    margin:0 auto;
+}
+
+.deaf1{
+    width: 200px;
+    float: right;
+    border-radius: 100%;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.deaf2{
+    width: 100px;
+    padding-top: 50px;
+    height: 100px;
+    margin: 0;
+}
+
+.deaf3{
+    width: 100px;
+    padding-left: 500px;
+    padding-top: 60px;
+    height: 100px;
+    margin: 0;
+}
+
+.deaf4{
+    width: 100px;
+    padding-left: 1000px;
+    padding-top: 200px;
+    margin: 0;
+}
+
+.deaf5{
+    width: 100px;
+    padding-left: 1100px;
+    padding-top: 30px;
+    height: 30px;
+    margin: 0;
+}
+
+.deaf6{
+    width: 100px;
+    height: 90px;
+    margin: 0;
+}
+
+.deaf7{
+    width: 100px;
+    padding-left: 500px;
+    margin: 0;
+}
+
+#deaf{
+    border: 5px solid black;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 0;
+}
+
+#deaf1{
+    border-radius: 50%;
+    margin: 0;
+}
+
+#deaf3{
+    border-radius: 50%;
+    margin: 0;
+}

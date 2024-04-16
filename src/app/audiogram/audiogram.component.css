@@ -1,0 +1,74 @@
+/*Berkovics Gellért*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('../../assets/image/hearing2.jpg');
+    color: white;   
+    overflow: hidden;
+    width: 100%; 
+}
+
+.container{
+    max-width: 1500px;
+    height: 1700px;
+    margin:0 auto;
+    background: transparent;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 10px black;
+    padding: 10px;
+    padding-bottom: 500px;
+}
+
+.container p{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.container h3{
+    font-size: 40px;
+    width: 1000px;
+    padding-left: 20px;
+}
+
+.header{    
+    color: white;
+    padding: 10px;
+}
+
+.header h1{
+    font-weight: bold;
+    text-align: center;
+    font-size: 50px;
+}
+
+.elsooszlop{
+    width: 50%;
+    float: left;
+    color: white;
+    padding: 15px;
+}
+
+h3{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.ketoszlop{
+    width: 40%;
+    float: left;
+    color: white;
+    padding: 15px;
+    padding-bottom: 120px;
+}
+
+.tipp{
+    background-color: black;
+    opacity: 0.6;
+    padding: 20px;
+    margin-bottom: 20px;
+}

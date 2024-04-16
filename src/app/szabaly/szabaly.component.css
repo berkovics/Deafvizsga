@@ -1,0 +1,102 @@
+/*Berkovics Gellért*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('../../assets/image/hearing2.jpg');
+    color: white; 
+    overflow: hidden;
+    width: 100%;
+}
+
+.szabaly{
+    max-width: 1500px;
+    margin:0 auto;
+    background: transparent;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 10px black;
+    padding: 15px;
+}
+
+.szabaly p{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.szabaly h3{
+    font-size: 40px;
+}
+
+.header{    
+    color: white;
+    padding: 15px;
+}
+
+.header h1{
+    font-weight: bold;
+    text-align: center;
+    font-size: 50px;
+}
+
+.elsooszlop{
+    width: 50%;
+    float: left;
+    color: white;
+    padding: 15px;
+    padding-bottom: 10px;
+}
+
+.elsooszlop h3{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.ketoszlop{
+    width: 50%;
+    float: right;
+    color: white;
+    padding: 15px;
+    padding-bottom: 200px;
+}
+
+.tipp{
+    background-color: black;
+    opacity: 0.6;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.tipp ul{
+    padding-top: 15px;
+}
+
+.tipp ul li{
+    padding-left: 15px;
+    list-style-position: inside;
+}
+
+.image{
+    text-align: center;
+}
+
+.kep-thumbnail{
+    width: 500px;
+    height: 400px;
+}
+
+.image p{
+    font-size: 50px;
+}
+
+.image a{
+    font-size: 50px;
+    color: white;
+}
+
+.image a:hover{
+    color: green;
+}

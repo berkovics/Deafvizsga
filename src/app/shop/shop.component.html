@@ -1,0 +1,81 @@
+<body>
+    <div class="shoptable">
+        <div class="row">
+            <div class="col-sm-8" id="elsooszlop">
+                <ng-container *ngIf="!showError; else hibuci">
+                    <ng-container *ngIf="shopping; else varakozas">
+                        <div class="container">
+                            <div class="row g-3">
+                                <div *ngFor="let bolt of shopping" class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                    <div class="card h-100">
+                                        <img [src]="bolt.imageUrl" class="card-img-top" [alt]="bolt.name">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{bolt.name}}</h5>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">{{bolt.price}} Ft</small>
+                                            <div class="input-group mb-3">
+                                                <input #db type="number" class="form-control" value="1" min="1" aria-describedby="button-addon2">
+                                                <button (click)="kosarba(bolt.id, db.value)" class="btn btn-primary" type="button" id="button-addon2">Megrendelés</button>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+
+                    <ng-template #varakozas>
+                        <div class="alert alert-warning" role="alert">
+                            <h2>Várakozás az adatok letöltésére!</h2>   
+                        </div>
+                    </ng-template>
+                </ng-container>
+
+                <ng-template #hibuci>
+                    <div class="alert alert-danger" role="alert">
+                        <h2>Hiba történt az adatok letöltésekor!</h2>
+                        <p>{{errorMessage}}</p>
+                    </div>
+                </ng-template>
+            </div>
+            
+            <div class="col-sm-3" id="masodikoszlop">
+                <div class="container">
+                    <div class="card border-dark mb-3" >
+                        <div class="card-header">
+                            <h4>Kosár</h4> 
+                        </div>
+                        <ng-container *ngIf="tetelek && tetelek.length != 0; else ures">
+                            <div *ngFor="let tetel of tetelek" class="card border-dark mb-3" >
+                                <div class="card-body text-dark">
+                                <h5 class="card-title">{{keresBolt(tetel.id).name}}</h5>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <input (change)="valtozas(tetel)" [(ngModel)]="tetel.db" min="1" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                        <span class="input-group-text" id="inputGroup-sizing-sm">
+                                            db x {{keresBolt(tetel.id).price}} Ft =
+                                            {{tetel.db * keresBolt(tetel.id).price}} Ft
+                                        </span>
+                                    </div>
+                                </div>
+                                <button (click)="tetelTorlese(tetel)" type="button" class="btn btn-danger btn-sm">
+                                    Tétel törlése
+                                </button>
+                            </div>
+                            <h5 class="ms-3">Fizetendő: {{osszesen()}} Ft</h5>
+                    
+                            <button (click)="fizetes()" type="button" class="btn btn-success btn-sm">
+                                Fizetés
+                            </button>
+                        </ng-container>
+                        <ng-template #ures>
+                            <div class="card-body">
+                                <p class="card-text">A kosár üres!</p>
+                            </div>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</body>

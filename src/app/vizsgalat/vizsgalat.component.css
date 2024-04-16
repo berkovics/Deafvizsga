@@ -1,0 +1,193 @@
+/*Berkovics Gellért*/
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}    
+  
+body{
+  width: 100%;
+  overflow: hidden;
+  background-image: url("../../assets/image/colorful_music_note_headphone_background_hd_music.jpg");   
+}
+  
+#header{
+  text-align: center;
+  padding: 30px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+  
+.container{
+  max-width: 1300px;
+  margin:0 auto;
+  height: 1250px;
+  background-color: white;
+  opacity: 0.7;
+}
+  
+form{
+  padding-bottom: 200px;
+  padding-left: 700px;
+  padding-top: 50px;
+  background-color: white;
+}
+  
+/*Button*/
+  
+.no-hear{
+  font-size: 24px;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  background-color: red;
+  color: white;
+  border-radius: 40px;
+}
+  
+.no-hear:hover{
+  background-color: dodgerblue;
+}
+  
+.hear{
+  font-size: 24px;
+  padding: 10px 56px;
+  margin-bottom: 20px;
+  background-color: green;
+  color: white;
+  border-radius: 40px;
+}
+  
+.hear:hover{
+  background-color: dodgerblue;
+}
+  
+.ertekeles{
+  font-size: 24px;
+  padding: 10px 45px;
+  background-color: aqua;
+  border-radius: 40px;
+}
+  
+.ertekeles:hover{
+  background-color: dodgerblue;
+}
+  
+/*Radio*/
+  
+#leftcolor{
+  accent-color: red;
+  width: 15px;
+  height: 15px;
+}
+  
+.fontred{
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+  
+#rightcolor{
+  accent-color: blue;
+  width: 15px;
+  height: 15px;
+}
+  
+.fontblue{
+  color: blue;
+  font-weight: bold;
+  font-size: 20px;
+}
+  
+/*Range*/
+  
+.range{
+  float: left;
+  transform: rotate(90deg) translate(50%, -50%);
+}
+  
+.sliderBlue{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 500%;
+  height: 50px;
+  border-radius: 25px;
+  outline: none;
+  background: #d3d3d3;
+  margin-top: 100px;
+}
+  
+.sliderBlue::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  border-radius: 50%;
+  cursor: pointer;
+}
+  
+.sliderBlue::-moz-range-progress{ /*<-- ez valami progress színek firefox!!!*/
+  background-color: blue;      
+  height: 50px;
+  border-radius: 25px;
+}
+  
+.sliderRed{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 500%;
+  height: 50px;
+  border-radius: 25px;
+  outline: none;
+  background: #d3d3d3;
+}
+  
+.sliderRed::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+}
+  
+.sliderRed::-moz-range-progress{ /*<-- ez valami progress színek firefox!!!*/
+  background-color: red;
+  height: 50px;
+  border-radius: 25px;
+}
+  
+/*span range value*/
+  
+.rengaValue{
+  text-align: right;
+  padding-right: 150px;
+}
+  
+#rangeBlueValue{
+  font-size: 6em;
+  color: blue;
+  font-weight: 400;
+  padding-right: 50px;
+}
+  
+#blueValue{
+  font-size: 3em;
+  color: blue;
+  font-weight: 600;
+}
+  
+#rangeRedValue{
+  font-size: 6em;
+  color: red;
+  font-weight: 400;
+  padding-right: 50px;
+}
+  
+#redValue{
+  font-size: 3em;
+  color: red;
+  font-weight: 600;
+}

@@ -1,0 +1,100 @@
+{
+  "hearShop": [
+    {
+      "id": "1",
+      "imageUrl": "https://megakft.com/wp-content/uploads/2023/02/widex675_mega.jpg",
+      "name": "800 elem",
+      "price": 100
+    },
+    {
+      "id": "2",
+      "imageUrl": "https://i0.wp.com/megakft.com/wp-content/uploads/2023/02/phonak312_mega.jpg?fit=1500%2C1500&ssl=1",
+      "name": "312 elem",
+      "price": "605"
+    },
+    {
+      "id": "3",
+      "imageUrl": "https://megakft.com/wp-content/uploads/2023/02/phonak13_mega.jpg",
+      "name": "13 elem",
+      "price": 1580
+    },
+    {
+      "id": "4",
+      "imageUrl": "https://i0.wp.com/megakft.com/wp-content/uploads/2023/02/phonak10_mega.jpg?fit=1500%2C1500&ssl=1",
+      "name": "10 elem",
+      "price": "605"
+    },
+    {
+      "id": "5",
+      "imageUrl": "https://www.hocoaccessories.com/wp-content/uploads/2020/12/w16-cool-motion-bluetooth-headphones-main.jpg",
+      "name": "Fejhallgató",
+      "price": "4990"
+    },
+    {
+      "id": "6",
+      "imageUrl": "https://acdn.hu/doir/2021/10/06/97d2c8fa-2b35-4918-803a-6cf49ec42952.jpg",
+      "name": "AXON V-183 hallókészülék",
+      "price": "13900"
+    },
+    {
+      "id": "7",
+      "imageUrl": "https://media-avustajat.fi/wp-upload_54812/share-2_Programozható-hallókészülék-eszköz-beállítása.jpeg",
+      "name": "Hallókészülék beállítás",
+      "price": "14540"
+    },
+    {
+      "id": "8",
+      "imageUrl": "https://www.hab.online/wp-content/uploads/2020/11/Phonak-Hard-Case.jpg",
+      "name": "Phonak doboz",
+      "price": "2900"
+    },
+    {
+      "id": "9",
+      "imageUrl": "https://img.fruugo.com/product/4/08/683977084_max.jpg",
+      "name": "Hallókészülék-tároló doboz",
+      "price": "3407"
+    },
+    {
+      "id": "10",
+      "imageUrl": "https://s13emagst.akamaized.net/products/17041/17040912/images/res_54ff7b0df5a9b3ad0b8ba43c903e851b.jpg?width=720&height=720&hash=50F16EB3934B5342A1416555DD23DC11",
+      "name": "Rayovac elemmérő",
+      "price": "2550"
+    },
+    {
+      "id": "11",
+      "imageUrl": "https://media.istockphoto.com/id/490613113/hu/fotó/cochleáris-implantátum.jpg?s=612x612&w=0&k=20&c=IbqpTSWcPI0kd6yjL9j039KnrQzyzrlwAoqpLqWy8As=",
+      "name": "Cochleáris implantátum",
+      "price": "512000"
+    },
+    {
+      "id": "12",
+      "imageUrl": "https://audiovary.hu/asset/media/term-tisztito-pumpa-2016-05-18-161904.jpg",
+      "name": "Tisztító pumpa",
+      "price": "2530"
+    },
+    {
+      "id": "13",
+      "imageUrl": "https://s13emagst.akamaized.net/products/49269/49268167/images/res_61bce51cbe890c7c03b2ab5edb68670c.png?width=720&height=720&hash=AEF75D96D104165D663AA72691EC04D1",
+      "name": "Tisztító spray",
+      "price": "2600"
+    },
+    {
+      "id": "14",
+      "imageUrl": "https://audiovary.hu/asset/media/szaritokapszula.jpg",
+      "name": "Szárítókapszula",
+      "price": "1520"
+    },
+    {
+      "id": "c83c",
+      "imageUrl": "https://marketplace.canva.com/EAE54xVnIvo/1/0/1600w/canva-beige-green-simple-product-feature-instagram-posts-4DHnplrmIp0.jpg",
+      "name": "22",
+      "price": 28000
+    },
+    {
+      "id": "e63b",
+      "imageUrl": "https://marketplace.canva.com/EAE54xVnIvo/1/0/1600w/canva-beige-green-simple-product-feature-instagram-posts-4DHnplrmIp0.jpg",
+      "name": "500 elem",
+      "price": 250
+    }
+  ]
+}

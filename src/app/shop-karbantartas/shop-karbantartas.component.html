@@ -1,0 +1,69 @@
+
+    <div class="shoptable">
+        <div class="row g-3">
+            <div class="col" >
+                <ng-container *ngIf="!showError; else hibuci">
+                    <ng-container *ngIf="shopping; else varakozas">
+                        <div class="container">
+                            <div class="row g-3">
+
+                                <div  class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                    <div class="card h-100">
+                                        <h4>Új termék felvitele</h4>
+                                        <img [src]="newAru.imageUrl" class="card-img-top" alt="termekkep">
+                                        <input  type="text" [(ngModel)]="newAru.imageUrl" class="form-control" aria-describedby="button-addon2">
+                                        <div class="card-body">
+                                            <input  type="text" [(ngModel)]="newAru.name" class="form-control" aria-describedby="button-addon2">
+                                            
+                                        </div>
+                                        <div class="card-footer">
+                                            <input  type="number" [(ngModel)]="newAru.price" class="form-control" aria-describedby="button-addon2">
+                                            <div class="input-group mb-3">
+                                              
+                                                <button (click)="postProduct()" class="btn btn-primary" type="button" id="button-addon2">Új Termék</button>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+
+                                <div *ngFor="let bolt of shopping" class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                    <div class="card h-100">
+                                        <img [src]="bolt.imageUrl" class="card-img-top" [alt]="bolt.name">
+                                        <input  type="text" [(ngModel)]="bolt.imageUrl" class="form-control" aria-describedby="button-addon2">
+                                        <div class="card-body">
+                                            <input  type="text" [(ngModel)]="bolt.name" class="form-control" aria-describedby="button-addon2">
+                                            
+                                        </div>
+                                        <div class="card-footer">
+                                            <input  type="number" [(ngModel)]="bolt.price" class="form-control" aria-describedby="button-addon2">
+                                            <div class="input-group mb-3">
+                                              
+                                                <button (click)="updateProduct(bolt)" class="btn btn-primary" type="button" id="button-addon2">Ment</button>
+                                                <button  (click)="deleteProduct(bolt)" class="btn btn-primary ms-4" type="button" id="button-addon2">Töröl</button>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+
+                    <ng-template #varakozas>
+                        <div class="alert alert-warning" role="alert">
+                            <h2>Várakozás az adatok letöltésére!</h2>   
+                        </div>
+                    </ng-template>
+                </ng-container>
+
+                <ng-template #hibuci>
+                    <div class="alert alert-danger" role="alert">
+                        <h2>Hiba történt az adatok letöltésekor!</h2>
+                        <p>{{errorMessage}}</p>
+                    </div>
+                </ng-template>
+            </div>
+            
+            
+    </div> 
+

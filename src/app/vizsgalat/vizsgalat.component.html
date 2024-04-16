@@ -1,0 +1,41 @@
+<!--Berkovics Gellért-->
+
+<body>
+    <div class="container">
+        <div id="header">
+            <h1>Hallás Vizsgálat</h1>
+        </div>
+
+        <div class="range">
+            <input [(ngModel)]="redRange" type="range" value="0" min="0" max="20000" class="sliderRed" id="rangeChechedRed"><br />
+            <input [(ngModel)]="blueRange" type="range" value="0" min="0" max="20000" class="sliderBlue" id="rangeChechedBlue">
+        </div>
+
+        <div class="button">
+            <form action="">
+                <label for="leftcolor" class="fontred radio-inline">
+                    <input [(ngModel)]="selected" type="radio" id="leftcolor" name="radio" value="red" checked>&nbsp; Bal
+                </label>
+
+                <br />
+
+                <label for="rightcolor" class="fontblue radio-inline">
+                    <input [(ngModel)]="selected" type="radio" id="rightcolor" name="radio" value="blue" checked>&nbsp; Jobb
+                </label>
+
+                <br /><br />
+
+                <button type="button" class="hear" (click)="hear()">Hallom</button><br />
+                <button type="button" class="no-hear" (click)="nohear()">Nem hallom</button><br />
+                <button type="button" class="ertekeles" (click)="ertekeles()">Értékelés</button><br />
+            </form>
+
+            <div class="rengaValue">
+                <span id="rangeBlueValue">{{blueValue}} Hz</span>
+                <span id="blueValue">{{blueValue2}}</span><br />
+                <span id="rangeRedValue">{{redValue}} Hz</span>
+                <span id="redValue">{{redValue2}}</span>
+            </div>
+        </div>
+    </div>
+</body>
