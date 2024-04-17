@@ -12,17 +12,12 @@ export class UserlistComponent {
   oszlopok = [
     "Név", "Telefonszám", "Lakcím", "Email"
   ]
-  ujregister:any = {}
   keresendo:any
   
   constructor(private config:ConfigService){
     this.config.getAll().subscribe(
       (res)=>this.register=res
     )
-  }
-
-  postRegister(){
-    this.config.postData(this.ujregister)
   }
 
   putRegister(body:any){

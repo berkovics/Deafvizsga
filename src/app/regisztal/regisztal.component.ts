@@ -11,11 +11,11 @@ import { ConfigService } from '../config.service';
 })
 export class RegisztalComponent {
 
+  name:any = ""
+  phonenumber:any = ""
+  address:any = ""
   email:any = ""
   password:string = ""
-  name:any = ""
-  telefonszam:any = ""
-  lakcim:any = ""
 
   constructor(private auth:AuthService, private router:Router, private config:ConfigService) {}
  
@@ -44,7 +44,7 @@ export class RegisztalComponent {
       return
     }
 
-    if (!this.telefonszam) {
+    if (!this.phonenumber) {
       Swal.fire({
         icon: "warning",
         title: "Kérem írja be a Telefonszám"
@@ -52,7 +52,7 @@ export class RegisztalComponent {
       return
     }
 
-    if (!this.lakcim) {
+    if (!this.address) {
       Swal.fire({
         icon: "warning",
         title: "Kérem írja be a Lakcím"
@@ -76,14 +76,17 @@ export class RegisztalComponent {
       }
     )
 
-    this.config.postData(this.name)
-    this.config.postData(this.telefonszam)
-    this.config.postData(this.lakcim)
-    this.config.postData(this.email)
+    let regist = [
+      this.name,
+      this.phonenumber,
+      this.address,
+      this.email
+    ]
+    this.config.postData(regist)
 
     this.name = ""
-    this.telefonszam = ""
-    this.lakcim = ""
+    this.phonenumber = ""
+    this.address = ""
     this.email = ""
     this.password = ""
   }
