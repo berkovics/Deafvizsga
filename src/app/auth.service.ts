@@ -28,4 +28,10 @@ export class AuthService {
   signInGoogle(){
     return this.fireAuth.signInWithPopup(new GoogleAuthProvider)
   } 
+
+  deleteAuth(){
+    return this.fireAuth.currentUser.then(user => {
+      user?.delete()
+    })
+  }
 }
