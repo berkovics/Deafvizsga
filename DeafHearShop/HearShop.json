@@ -85,16 +85,22 @@
       "price": "1520"
     },
     {
-      "id": 15,
+      "id": "15",
       "imageUrl": "https://audiovary.hu/asset/media/term-tisztito-elektromos-szarito-2016-05-18-162702.jpg",
       "name": "Elektromos szárítódoboz",
       "price": "21700"
     },
     {
-      "id": 16,
+      "id": "16",
       "imageUrl": "https://audiovary.hu/asset/media/term-tisztito-nedves-torlokendo-2016-05-18-162109.jpg",
       "name": "Törlőkendő",
       "price": "3397"
+    },
+    {
+      "id": "6364"
+    },
+    {
+      "id": "4b2f"
     }
   ]
 }
