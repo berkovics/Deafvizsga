@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-belepes',
@@ -13,7 +14,7 @@ export class BelepesComponent {
   email:string = ""
   password:string = ""
 
-  constructor(private auth:AuthService, private router:Router) {}
+  constructor(private auth:AuthService, private router:Router, private http:HttpClient) {}
  
   login() {
     if (this.email == "") {
@@ -31,7 +32,7 @@ export class BelepesComponent {
       })
       return
     }
-
+/*
     this.auth.belepes(this.email, this.password).then(
       (res:any) => {
         localStorage.setItem('token', 'true')
@@ -46,6 +47,16 @@ export class BelepesComponent {
           title: err.message
         })
         this.router.navigate(['/belepes'])
+      }
+    )*/
+
+    let login = [
+      this.email,
+      this.password
+    ]
+    this.http.post("http://127.0.0.1:8000/api/login", login).subscribe(
+      res => {
+        console.log("Login successfully: ", res)
       }
     )
 

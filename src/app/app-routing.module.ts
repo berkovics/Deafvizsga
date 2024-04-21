@@ -9,7 +9,6 @@ import { AudiogramComponent } from './audiogram/audiogram.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { VarifyEmailComponent } from './varify-email/varify-email.component';
 import { ShopComponent } from './shop/shop.component';
-import { UserlistComponent } from './userlist/userlist.component';
 import { ShopKarbantartasComponent } from './shop-karbantartas/shop-karbantartas.component';
 
 const routes: Routes = [
@@ -23,7 +22,6 @@ const routes: Routes = [
   {path: 'forgot-password', component: ForgotPasswordComponent},
   {path: 'varify-email', component: VarifyEmailComponent},
   {path: 'shop', component: ShopComponent},
-  {path: 'userlist', component: UserlistComponent},
   {path: 'shopkarbantartas', component: ShopKarbantartasComponent}
 ];
 

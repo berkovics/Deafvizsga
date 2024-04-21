@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
+import { ConfigService } from './config.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Deaf';
 
-  constructor(private auth:AuthService, private router:Router){}
+  constructor(private auth:AuthService, private router:Router, private config:ConfigService){}
 
   loggedIn(){
     return !!localStorage.getItem('token')
@@ -23,5 +24,7 @@ export class AppComponent {
         this.router.navigate(['/belepes'])
       }
     )
+
+    //this.config.postLogout()
   }
 }

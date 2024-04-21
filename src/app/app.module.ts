@@ -22,7 +22,6 @@ import { AuthService } from './auth.service';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { HttpClientModule } from '@angular/common/http';
 import { ShopComponent } from './shop/shop.component';
-import { UserlistComponent } from './userlist/userlist.component';
 import { SortPipe } from './sort.pipe';
 import { AngularFireDatabase, AngularFireList} from '@angular/fire/compat/database/database';
 import { ShopKarbantartasComponent } from './shop-karbantartas/shop-karbantartas.component';
@@ -39,7 +38,6 @@ import { ShopKarbantartasComponent } from './shop-karbantartas/shop-karbantartas
     ForgotPasswordComponent,
     VarifyEmailComponent,
     ShopComponent,
-    UserlistComponent,
     SortPipe,
     ShopKarbantartasComponent
   ],

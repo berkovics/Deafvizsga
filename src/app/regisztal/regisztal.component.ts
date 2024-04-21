@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
-import { ConfigService } from '../config.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-regisztal',
@@ -12,12 +12,11 @@ import { ConfigService } from '../config.service';
 export class RegisztalComponent {
 
   name:any = ""
-  phonenumber:any = ""
-  address:any = ""
   email:any = ""
   password:string = ""
+  password_confirmation:string = ""
 
-  constructor(private auth:AuthService, private router:Router, private config:ConfigService) {}
+  constructor(private auth:AuthService, private router:Router, private http:HttpClient) {}
  
   register() {
     if (!this.email) {
@@ -36,6 +35,14 @@ export class RegisztalComponent {
       return
     }
 
+    if (!this.password_confirmation) {
+      Swal.fire({
+        icon: "warning",
+        title: "Kérem írja be a megerősítés jelszót"
+      })
+      return
+    }
+
     if (!this.name) {
       Swal.fire({
         icon: "warning",
@@ -43,23 +50,7 @@ export class RegisztalComponent {
       })
       return
     }
-
-    if (!this.phonenumber) {
-      Swal.fire({
-        icon: "warning",
-        title: "Kérem írja be a Telefonszám"
-      })
-      return
-    }
-
-    if (!this.address) {
-      Swal.fire({
-        icon: "warning",
-        title: "Kérem írja be a Lakcím"
-      })
-      return
-    }
-
+/*
     this.auth.register(this.email, this.password).then(
       (res:any) => {
         Swal.fire({
@@ -74,20 +65,23 @@ export class RegisztalComponent {
         })
         this.router.navigate(['/regisztal'])
       }
-    )
+    )*/
 
     let regist = [
       this.name,
-      this.phonenumber,
-      this.address,
-      this.email
+      this.email,
+      this.password,
+      this.password_confirmation
     ]
-    this.config.postData(regist)
+    this.http.post("http://127.0.0.1:8000/api/register", regist).subscribe(
+      res => {
+        console.log("Registered successfully: ", res)
+      }
+    )
 
     this.name = ""
-    this.phonenumber = ""
-    this.address = ""
     this.email = ""
     this.password = ""
+    this.password_confirmation = ""
   }
 }
