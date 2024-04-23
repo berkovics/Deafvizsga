@@ -32,7 +32,7 @@ export class BelepesComponent {
       })
       return
     }
-/*
+
     this.auth.belepes(this.email, this.password).then(
       (res:any) => {
         localStorage.setItem('token', 'true')
@@ -48,7 +48,7 @@ export class BelepesComponent {
         })
         this.router.navigate(['/belepes'])
       }
-    )*/
+    )
 
     let login = [
       this.email,

@@ -18,7 +18,7 @@ export class RegisztalComponent {
 
   constructor(private auth:AuthService, private router:Router, private http:HttpClient) {}
  
-  register() {
+  register(): void {
     if (!this.email) {
       Swal.fire({
         icon: "warning",
@@ -50,7 +50,7 @@ export class RegisztalComponent {
       })
       return
     }
-/*
+
     this.auth.register(this.email, this.password).then(
       (res:any) => {
         Swal.fire({
@@ -65,15 +65,15 @@ export class RegisztalComponent {
         })
         this.router.navigate(['/regisztal'])
       }
-    )*/
+    )
 
-    let regist = [
-      this.name,
-      this.email,
-      this.password,
-      this.password_confirmation
-    ]
-    this.http.post("http://127.0.0.1:8000/api/register", regist).subscribe(
+    const userData = {
+      name: this.name,
+      email: this.email,
+      password: this.password,
+      password_confirmation: this.password_confirmation
+    }
+    this.http.post<any>("http://127.0.0.1:8000/api/register", userData).subscribe(
       res => {
         console.log("Registered successfully: ", res)
       }
