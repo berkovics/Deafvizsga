@@ -1,9 +1,5 @@
 # DeafHear
 
-Running:
-    -ng serve -o
-    -npm start
-    -api: start
+Running: npm i vagy npm install, ng serve -o, npm start, composer i vagy composer install, php artisan serve
 
-Api:
-    https://github.com/berkovics/DeafHearAPI.git
+Laravel Api: https://github.com/berkovics/BackendDeaf.git

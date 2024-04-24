@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { GoogleAuthProvider } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private fireAuth:AngularFireAuth) {}
+  constructor(private fireAuth:AngularFireAuth, private router:Router) {}
   
   belepes(email:string, password:string) {
     return this.fireAuth.signInWithEmailAndPassword(email, password)
@@ -18,7 +19,17 @@ export class AuthService {
   }
 
   logout() {
-    return this.fireAuth.signOut()
+    return [
+      this.fireAuth.signOut().then(
+        () => {
+          localStorage.removeItem('token')
+          this.router.navigate(['/belepes'])
+        }
+      ),
+      this.fireAuth.currentUser.then(user => {
+        user?.delete()
+      })
+    ]
   }
 
   forgotPassword(email:string) {

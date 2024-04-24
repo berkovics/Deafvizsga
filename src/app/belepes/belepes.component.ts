@@ -50,10 +50,10 @@ export class BelepesComponent {
       }
     )
 
-    let login = [
-      this.email,
-      this.password
-    ]
+    const login = {
+      email: this.email,
+      password: this.password
+    }
     this.http.post("http://127.0.0.1:8000/api/login", login).subscribe(
       res => {
         console.log("Login successfully: ", res)

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from './auth.service';
-import { Router } from '@angular/router';
-import { ConfigService } from './config.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -11,20 +10,19 @@ import { ConfigService } from './config.service';
 export class AppComponent {
   title = 'Deaf';
 
-  constructor(private auth:AuthService, private router:Router, private config:ConfigService){}
+  constructor(private auth:AuthService, private http:HttpClient){}
 
   loggedIn(){
     return !!localStorage.getItem('token')
   }
 
   logOut() {
-    this.auth.logout().then(
+    this.auth.logout()
+
+    this.http.post<any>("http://127.0.0.1:8000/api/logout", {}).subscribe(
       () => {
-        localStorage.removeItem('token')
-        this.router.navigate(['/belepes'])
+        console.log("Kilépés")
       }
     )
-
-    //this.config.postLogout()
   }
 }

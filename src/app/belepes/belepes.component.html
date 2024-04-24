@@ -8,11 +8,11 @@
         <form>
             <h1>Belépés</h1>
             <div class="input-box">
-                <input type="email" name="email" placeholder="Email" [(ngModel)]="email">
+                <input type="email" name="email" placeholder="Email" [(ngModel)]="email" required>
                 <i class='bx bxl-gmail'></i>
             </div>
             <div class="input-box">
-                <input type="password" name="password" placeholder="Jelszó" [(ngModel)]="password">
+                <input type="password" name="password" placeholder="Jelszó" [(ngModel)]="password" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
             <div class="forgot">
@@ -21,7 +21,7 @@
                 </label>
             </div>
 
-            <button type="button" class="btn btn-primary" (click)="login()">Belépés</button>
+            <button type="submit" class="btn btn-primary" (click)="login()">Belépés</button>
 
             <div class="register-link">
                 <p>Nincs fiókod? <a href="/regisztal">Regisztráció</a></p>
